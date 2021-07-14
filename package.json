@@ -3,8 +3,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview",
-    "lint": 
+    "serve": "vite preview"
   },
   "dependencies": {
     "element-plus": "^1.0.2-beta.55",
