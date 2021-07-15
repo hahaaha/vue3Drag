@@ -1,21 +1,21 @@
 <template>
-<div class="drag-field">
-    <draggable
-        :list="list"
-        class="list-group"
-        item-key="simple"
-        ghost-class="ghost"
-        group="components"
-        @start="dragging = true"
-        @end="dragging = false"
-      >
-        <template #item="{ element }">
-          <div class="list-group-item" :class="{ 'not-draggable': !enabled }">
-            {{ element.name }}
-          </div>
-        </template>
-      </draggable>
-      </div>
+    <div class="drag-field">
+        <draggable
+            :list="list"
+            class="list-group"
+            item-key="simple"
+            ghost-class="ghost"
+            group="components"
+            @start="dragging = true"
+            @end="dragging = false"
+        >
+            <template #item="{ element }">
+                <div class="list-group-item" :class="{ 'not-draggable': !enabled }">
+                    {{ element.name }}
+                </div>
+            </template>
+        </draggable>
+    </div>
 </template>
 
 <script>
@@ -32,7 +32,7 @@ export default defineComponent({
             list: [{
                 name: 'abc',
                 id: 0
-            },{
+            }, {
                 name: 'efg',
                 id: 1
             }],

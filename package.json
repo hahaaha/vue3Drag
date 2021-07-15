@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint 'src/**/*.{js,ts,vue}'"
   },
   "dependencies": {
     "element-plus": "^1.0.2-beta.55",

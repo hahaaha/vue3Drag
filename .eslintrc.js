@@ -7,7 +7,7 @@ module.exports = {
     },
     "extends": [
         "eslint:recommended",
-        "plugin:vue/essential",
+        "plugin:vue/vue3-essential",
         "plugin:@typescript-eslint/recommended"
     ],
     "parserOptions": {
@@ -23,5 +23,7 @@ module.exports = {
         '@typescript-eslint/ban-ts-ignore': 'off',
         '@typescript-eslint/ban-types': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
+        'indent': ['error',4],
+        'vue/html-indent':['error',4]
     }
 };
