@@ -10,34 +10,34 @@
             @end="dragging = false"
         >
             <template #item="{ element }">
-                <div class="list-group-item" :class="{ 'not-draggable': !enabled }">
-                    {{ element.name }}
-                </div>
+                <ElementRender :name="element.element" />
             </template>
         </draggable>
     </div>
 </template>
 
-<script>
-import { defineComponent } from "@vue/runtime-core"
+<script lang="ts">
+import { defineComponent, ref } from "@vue/runtime-core"
 import draggable from 'vuedraggable'
+import ElementRender from './ElementRender.vue'
+import { IElement } from './type/index'
 
 export default defineComponent({
     components: {
-        draggable
+        draggable,
+        ElementRender
     },
-    data() {
-        return {
-            enabled: true,
-            list: [{
-                name: 'abc',
-                id: 0
-            }, {
-                name: 'efg',
-                id: 1
-            }],
-            dragging: false
-        }
+    setup() {
+        const dragging = ref(false)
+        const list = ref<Pick<IElement,'id'|'element'>[]>([{
+            id: 0,
+            element: 'gInput',
+        }, {
+            id: 1,
+            element: 'gInput'
+        }])
+
+        return { list,dragging }
     }
 })
 </script>

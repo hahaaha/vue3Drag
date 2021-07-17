@@ -1,19 +1,19 @@
 <template>
     <div id="drag_container">
         <ElementList />
-        <DragField />
+        <Editable />
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import DragField from './components/DragField.vue'
+import Editable from './components/Editable.vue'
 import ElementList from './components/ElementList.vue'
 
 export default defineComponent({
     name: 'App',
     components: {
-        DragField,
+        Editable,
         ElementList,
     },
 })

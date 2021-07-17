@@ -16,34 +16,39 @@
     </div>
 </template>
 
-<script>
-import { defineComponent } from "@vue/runtime-core";
-import draggable from 'vuedraggable';
+<script lang="ts">
+import { defineComponent, ref } from '@vue/runtime-core'
+import draggable from 'vuedraggable'
+import { IElement } from './type/index'
 
 export default defineComponent({
     components: {
-        draggable
+        draggable,
     },
-    data() {
-        return {
-            elementList: [{
+    setup() {
+        const elementList = ref<IElement[]>([
+            {
                 name: '123',
+                element: 'gInput',
                 title: '菜单1',
                 icon: 'el-icon-circle-plus-outline',
-                id: 0
-            }, {
+                id: 0,
+            },
+            {
                 name: '456',
+                element: 'gInput',
                 title: '菜单2',
                 icon: 'el-icon-circle-plus-outline',
-                id: 1
-            }]
-        }
+                id: 1,
+            },
+        ])
+        return { elementList }
     },
     methods: {
         log() {
             console.log(this.elementList)
-        }
-    }
+        },
+    },
 })
 </script>
 <style lang="scss">
