@@ -3,5 +3,6 @@ export interface IElement {
     element: String,
     icon: String,
     title: String,
-    name?: String
+    name?: String,
+    configure: any 
 }

@@ -30,16 +30,29 @@ export default defineComponent({
             {
                 name: '123',
                 element: 'gInput',
-                title: '菜单1',
+                title: '输入框',
                 icon: 'el-icon-circle-plus-outline',
                 id: 0,
+                configure: {},
             },
             {
                 name: '456',
-                element: 'gInput',
-                title: '菜单2',
+                element: 'gText',
+                title: '文本',
                 icon: 'el-icon-circle-plus-outline',
                 id: 1,
+                configure: {
+                    text: {
+                        title: '文本',
+                        value: '文本输入'
+                    },
+                    color: {
+                        title: '字体颜色', value: 'red' 
+                    },
+                    fontSize: {
+                        title: '字号', value: '28px'
+                    }
+                },
             },
         ])
         return { elementList }
