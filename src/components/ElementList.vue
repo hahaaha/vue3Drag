@@ -4,6 +4,7 @@
             class="dragArea list-group"
             :list="elementList"
             :group="{ name: 'components', pull: 'clone', put: false }"
+            :clone="cloneConf"
             @change="log"
         >
             <template #item="{ element }">
@@ -44,18 +45,24 @@ export default defineComponent({
                 configure: {
                     text: {
                         title: '文本',
-                        value: '文本输入'
+                        value: '文本输入',
                     },
                     color: {
-                        title: '字体颜色', value: 'red' 
+                        title: '字体颜色',
+                        value: 'red',
                     },
                     fontSize: {
-                        title: '字号', value: '28px'
-                    }
+                        title: '字号',
+                        value: '28px',
+                    },
                 },
             },
         ])
-        return { elementList }
+        const cloneConf = (origial:IElement) => {
+            const newClone = JSON.parse(JSON.stringify(origial))
+            return newClone
+        }
+        return { elementList, cloneConf }
     },
     methods: {
         log() {
