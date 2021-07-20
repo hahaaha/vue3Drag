@@ -5,8 +5,10 @@ import 'element-plus/lib/theme-chalk/index.css'
 import gInput from './globalComponents/GlobalInput.vue'
 import gText from './globalComponents/GlobalText.vue'
 
+import './styles/_reboot.scss'
+
 createApp(App)
     .use(ElementPlus)
-    .component('gInput',gInput)
-    .component('gText',gText)
+    .component('gInput', gInput)
+    .component('gText', gText)
     .mount('#app')

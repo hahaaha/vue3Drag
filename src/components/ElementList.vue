@@ -1,20 +1,18 @@
 <template>
-    <div class="element-list">
-        <draggable
-            class="dragArea list-group"
-            :list="elementList"
-            :group="{ name: 'components', pull: 'clone', put: false }"
-            :clone="cloneConf"
-            @change="log"
-        >
-            <template #item="{ element }">
-                <div class="element-group-item">
-                    <i :class="element.icon"></i>
-                    {{ element.title }}
-                </div>
-            </template>
-        </draggable>
-    </div>
+  <div class="element-list">
+    <draggable class="dragArea list-group"
+      :list="elementList"
+      :group="{ name: 'components', pull: 'clone', put: false }"
+      :clone="cloneConf"
+      @change="log">
+      <template #item="{ element }">
+        <div class="element-group-item">
+          <i :class="element.icon"></i>
+          {{ element.title }}
+        </div>
+      </template>
+    </draggable>
+  </div>
 </template>
 
 <script lang="ts">
@@ -58,7 +56,7 @@ export default defineComponent({
                 },
             },
         ])
-        const cloneConf = (origial:IElement) => {
+        const cloneConf = (origial: IElement) => {
             const newClone = JSON.parse(JSON.stringify(origial))
             return newClone
         }
@@ -73,10 +71,13 @@ export default defineComponent({
 </script>
 <style lang="scss">
 .element-list {
-    border: 1px #dcdfe6 solid;
     .element-group-item {
-        width: 100px;
+        padding: 8px 12px;
         border: 1px #e4e7ed solid;
+        cursor: pointer;
+        & + .element-group-item {
+            border-top: none;
+        }
     }
 }
 </style>
