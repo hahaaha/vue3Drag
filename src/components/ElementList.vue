@@ -1,18 +1,18 @@
 <template>
-  <div class="element-list">
-    <draggable class="dragArea list-group"
-      :list="elementList"
-      :group="{ name: 'components', pull: 'clone', put: false }"
-      :clone="cloneConf"
-      @change="log">
-      <template #item="{ element }">
-        <div class="element-group-item">
-          <i :class="element.icon"></i>
-          {{ element.title }}
-        </div>
-      </template>
-    </draggable>
-  </div>
+    <div class="element-list">
+        <draggable class="dragArea list-group"
+                   :list="elementList"
+                   :group="{ name: 'components', pull: 'clone', put: false }"
+                   :clone="cloneConf"
+                   @change="log">
+            <template #item="{ element }">
+                <div class="element-group-item">
+                    <i :class="element.icon"></i>
+                    {{ element.title }}
+                </div>
+            </template>
+        </draggable>
+    </div>
 </template>
 
 <script lang="ts">

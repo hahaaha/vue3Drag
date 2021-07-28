@@ -1,20 +1,20 @@
 <template>
-  <div id="drag_container">
-    <Toolbar />
-    <div class="drag_content">
-      <div class="left">
-        <ElementList />
-      </div>
-      <div class="center">
-        <Editable @getConf="getConf" />
-      </div>
-      <div class="right">
-        <div>属性面板</div>
-        <br />
-        <ConfigureList :conf="Conf" />
-      </div>
+    <div id="drag_container">
+        <Toolbar />
+        <div class="drag_content">
+            <div class="left">
+                <ElementList />
+            </div>
+            <div class="center">
+                <Editable @getConf="getConf" />
+            </div>
+            <div class="right">
+                <div>属性面板</div>
+                <br />
+                <ConfigureList :conf="Conf" />
+            </div>
+        </div>
     </div>
-  </div>
 </template>
 
 <script lang="ts">
