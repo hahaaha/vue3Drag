@@ -1,11 +1,13 @@
 <template>
-    <div id="configure_list">
-        <el-form>
-            <el-form-item v-for="(c, index) in configure" :key="index" :label="c.title">
-                <el-input v-model="c.value"/>
-            </el-form-item>
-        </el-form>
-    </div>
+  <div id="configure_list">
+    <el-form>
+      <el-form-item v-for="(c, index) in configure"
+        :key="index"
+        :label="c.title">
+        <el-input v-model="c.value" />
+      </el-form-item>
+    </el-form>
+  </div>
 </template>
 
 <script lang="ts">
@@ -17,7 +19,7 @@ export default defineComponent({
     setup(props) {
         const configure = ref(props.conf)
         return {
-            configure
+            configure,
         }
     },
 })
