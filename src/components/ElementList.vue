@@ -1,10 +1,12 @@
 <template>
     <div class="element-list">
-        <draggable class="dragArea list-group"
-                   :list="elementList"
-                   :group="{ name: 'components', pull: 'clone', put: false }"
-                   :clone="cloneConf"
-                   @change="log">
+        <draggable
+            class="dragArea list-group"
+            :list="elementList"
+            :group="{ name: 'components', pull: 'clone', put: false }"
+            :clone="cloneConf"
+            @change="log"
+        >
             <template #item="{ element }">
                 <div class="element-group-item">
                     <i :class="element.icon"></i>
@@ -42,16 +44,18 @@ export default defineComponent({
                 id: 1,
                 configure: {
                     text: {
-                        title: '文本',
+                        title: '文本内容',
                         value: '文本输入',
                     },
                     color: {
                         title: '字体颜色',
+                        type: 'color',
                         value: 'red',
                     },
                     fontSize: {
-                        title: '字号',
-                        value: '28px',
+                        title: '字体大小',
+                        type: 'number',
+                        value: 28,
                     },
                 },
             },

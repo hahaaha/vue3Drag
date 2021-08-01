@@ -1,16 +1,20 @@
 <template>
     <div class="drag-field">
-        <draggable :list="list"
-                   class="list-group"
-                   item-key="simple"
-                   ghost-class="ghost"
-                   group="components"
-                   @start="dragging = true"
-                   @end="dragging = false">
+        <draggable
+            :list="list"
+            class="list-group"
+            item-key="simple"
+            ghost-class="ghost"
+            group="components"
+            @start="dragging = true"
+            @end="dragging = false"
+        >
             <template #item="{ element }">
-                <ElementRender :name="element.element"
-                               :conf="element.configure"
-                               @getConf="getConf" />
+                <ElementRender
+                    :name="element.element"
+                    :conf="element.configure"
+                    @getConf="getConf"
+                />
             </template>
         </draggable>
     </div>

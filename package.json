@@ -5,6 +5,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "lint": "eslint 'src/**/*.{js,ts,vue}'",
+    "lint-fix": "eslint --fix 'src/**/*.{js,ts,vue}'",
     "pre-commit": "npm run lint"
   },
   "dependencies": {

@@ -1,17 +1,30 @@
 <template>
-    <div :style={color,fontSize}>
+    <div :style="style">
         <slot></slot>
     </div>
 </template>
-<script>
-export default {
+<script lang="ts">
+import { computed, defineComponent, toRefs, ref } from '@vue/runtime-core'
+
+export default defineComponent({
     props: {
         color: {
-            type: String
+            type: String,
         },
         fontSize: {
-            type: String
-        }
-    }
-}
+            type: Number,
+        },
+    },
+    setup(props) {
+        const { color, fontSize } = toRefs(props)
+        const style = computed(() => {
+            return {
+                color: color.value,
+                fontSize: fontSize.value + 'px',
+            }
+        })
+
+        return { style }
+    },
+})
 </script>

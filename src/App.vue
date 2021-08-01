@@ -76,7 +76,7 @@ export default defineComponent({
             }
             .right {
                 position: absolute;
-                width: 262px;
+                width: 350px;
                 height: 100%;
                 right: 0;
                 top: 0;
