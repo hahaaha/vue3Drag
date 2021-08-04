@@ -48,14 +48,14 @@ export default defineComponent({
     display: flex;
     justify-content: center;
     position: relative;
-    width: 1200px;
-    height: 780px;
+    // inphe8 plus
+    width: 414px;
+    height: 736px;
     background: #fff;
     margin: auto;
     .list-group {
         width: 100%;
         height: 100%;
-        padding: 20px;
     }
 }
 </style>
