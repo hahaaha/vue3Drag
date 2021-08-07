@@ -30,7 +30,7 @@ export default defineComponent({
         const elementList = ref<IElement[]>([
             {
                 name: '123',
-                element: 'gInput',
+                element: 'GlobalInput',
                 title: '输入框',
                 icon: 'el-icon-circle-plus-outline',
                 id: 0,
@@ -38,7 +38,7 @@ export default defineComponent({
             },
             {
                 name: '456',
-                element: 'gText',
+                element: 'GlobalText',
                 title: '文本',
                 icon: 'el-icon-circle-plus-outline',
                 id: 1,
