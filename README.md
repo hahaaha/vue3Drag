@@ -25,3 +25,25 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 3. Open `src/main.ts` in VSCode
 4. Open the VSCode command palette
 5. Search and run "Select TypeScript version" -> "Use workspace version"
+
+## 贡献
+如果想参与贡献，请先阅读开发贡献文档，非常感谢你所做的任何贡献。
+
+### development Setup
+你需要安装nodejs和npm，在clone项目后，运行下面命令：
+```
+$ npm install
+```
+### commit
+commit的提交信息需要遵循[commit message规范](https://zhuanlan.zhihu.com/p/182553920?utm_source=wechat_session)
+
+### 新增组件
+我们自定义的全局组件是以组件库的形式提供的，组件库的写法和目录约定可以参考这个[组件](https://github.com/hahaaha/vue3Drag/tree/main/src/globalComponents/GlobalText)。
+
+## 项目结构
+- src: 项目源代码所在的位置。
+    - components：项目组件
+    - globalComponents: 画布中用到的全局组件库所在的目录
+    
+
+
